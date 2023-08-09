@@ -1,0 +1,30 @@
+name: Practice Workflow
+
+on:
+  push:
+    branches:
+      - main 
+  pull_request:
+    branches:
+      - main 
+  workflow-dispatch:
+  
+job:
+ hello:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v2
+   - name: hello world
+     run: echo " Hello World"
+     shell: bash
+     
+  goodbye:
+   runs-on: ubuntu-latest
+   steps:
+    - name: goodbye World
+      run: echo "Goodbye World"
+      shell: bash
+     
+  
+  
+ 
